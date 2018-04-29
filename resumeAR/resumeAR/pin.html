@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Pin Dropper with Shadow</title>
     <style>
-
         /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
         @import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic);
 
@@ -275,30 +274,25 @@
             }
         }
 
-        #canvasHold {
-            width: 100%;
-            height: 100%;
-        }
-
-        canvas {
-            /*margin-left: 25%;*/ /*background:purple;*/
-            background-image: url(./images/resume.jpg);
-            width: 100%;
-            height: 100%;
-            padding-top: 5%;
-            text-align: center;
-        }
+        
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
 <body>
-    <h1>CLICK TO ADD PINS - PIN DROPPER</h1>
-    <img class="pin" width="75" height="75" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABAZJREFUeNrsnO1tGkEQhveQ/4cUEAlXEFxAZKgAUkGgAocK4CoAKuCoIJcKOJQCoANflAYoIbPWxEIRYG5n3v1AHmnFD5u9vYd3Z2b3Zi8znu3Pw5c2fQypfabW5dY+8+8HantuW2rVp92vgwlkmWdATwxHYhbcklrpG1zmAdKU2uiCelztwNAWvqBlQFAzVlIbfA8v0AjYLDlYBMlOsx/UOp5dip2eY4K2R12gpQzqO33sAoAy7At3NIZR9MqiQa7YN8VgBSlsHCWsyEDBgGU3CgoCrCUENY8YlLURR+WwyqJBDDnqpWB9UlgVBBaB6nDUaycCy+Zi99Lk1XUazhMCZXisc+/KIlX16GNj0jTRdLxzVBXC/r+JHuAa0xPXwSgLoKqC2vrcr81BZKAccZ3V1dRnPSkNuGSHO740cPpbyXnSPX9Hw77BlcUR8FlhsBMCsBCsPTXcwEeXyNhEWUOFQY5dQbHS7Hc1MvIhehoOhAPM6WYL6V1yHwthNwM0LEl0qjU356ivie1T0EUPBoujoMhPAdKAXJKksg+GKKsjVFWpTYqno0RdUcIqDc4qn1PxWlgfBIPaAmEh+3aGJXnWh3xMVccI693eYWFg1ZGOvx0jrN++E8Ar7fHWpuEA2LdkvQpbSEvyma7CCuDcqkKS/+1RsKQ+awpQlbTPGgKLlha1dOGqWYPA+1oitfI9wXyWtDplzhU2UlBdBVU5uZUmsH4qhPmNBBh/d6OQMmzRsCqFGWRvcsfTqCmomdF7sOt0L02f7uyMvCb02MFe3D09qkWdGsWaL7qm05P4ps8N14qw7M2vuAqnOjE1HkEJrfOW0Z3DhRAPWXvgTF/F97Yayrc22M08H1Z6gaUUFUNaIamkaQxLYe87pK1DLKTXCYKqpQVtrrAWBrtdjLBc2oETLJ73y4RAHTQCk2Q/KyV1LTXO9zjDSkhdByOvjRArKxV1LbVOjYlgJaAuNVU1XkhfWPA+mzCHm96yiaQeTHsavg4q0rxqodmhCiyukqkig6V+KqylPLhYnH2pcfwEBot3JGJw9geEqrSVZbgUch8YVo46YN5KwVc0sErbqUNh8YHu/Jamn2qedSb30ny4cY19RdSuoqfh6+A9RscCDQoKi6Ojj2R17ysphpYc8RZ0gfZTvl6v4qM+awJMJ6BvCPEOi391hP/KffgpL9HwRHTsGb2DnZA3gkQDi4GN6GMldegE6iFExuu1tFvh+Jv1T/1Qy4MsxEUdX8nyAurmX2N3Bph928i11cYqL7FIahqeWHDvrwTVDw0qqLJYXbZYze7ft98AFXrbJ7iy/uVg/Qs52DgWUMFhMbBza7ux76QzelhHKcXxHthC46T+TZuNkJxWRGl/BRgAtAd0cl+QnEwAAAAASUVORK5CYII=" />
+    <label>PDF File:</label><br />
+    <input type="file" id="imageLoader" name="imageLoader" />
+
+    <h1>Click to add AR Markers on your resume</h1>
+    <img class="pin" width="75" height="75" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABAZJREFUeNrsnO1tGkEQhveQ/4cUEAlXEFxAZKgAUkGgAocK4CoAKuCoIJcKOJQCoANflAYoIbPWxEIRYG5n3v1AHmnFD5u9vYd3Z2b3Zi8znu3Pw5c2fQypfabW5dY+8+8HantuW2rVp92vgwlkmWdATwxHYhbcklrpG1zmAdKU2uiCelztwNAWvqBlQFAzVlIbfA8v0AjYLDlYBMlOsx/UOp5dip2eY4K2R12gpQzqO33sAoAy7At3NIZR9MqiQa7YN8VgBSlsHCWsyEDBgGU3CgoCrCUENY8YlLURR+WwyqJBDDnqpWB9UlgVBBaB6nDUaycCy+Zi99Lk1XUazhMCZXisc+/KIlX16GNj0jTRdLxzVBXC/r+JHuAa0xPXwSgLoKqC2vrcr81BZKAccZ3V1dRnPSkNuGSHO740cPpbyXnSPX9Hw77BlcUR8FlhsBMCsBCsPTXcwEeXyNhEWUOFQY5dQbHS7Hc1MvIhehoOhAPM6WYL6V1yHwthNwM0LEl0qjU356ivie1T0EUPBoujoMhPAdKAXJKksg+GKKsjVFWpTYqno0RdUcIqDc4qn1PxWlgfBIPaAmEh+3aGJXnWh3xMVccI693eYWFg1ZGOvx0jrN++E8Ar7fHWpuEA2LdkvQpbSEvyma7CCuDcqkKS/+1RsKQ+awpQlbTPGgKLlha1dOGqWYPA+1oitfI9wXyWtDplzhU2UlBdBVU5uZUmsH4qhPmNBBh/d6OQMmzRsCqFGWRvcsfTqCmomdF7sOt0L02f7uyMvCb02MFe3D09qkWdGsWaL7qm05P4ps8N14qw7M2vuAqnOjE1HkEJrfOW0Z3DhRAPWXvgTF/F97Yayrc22M08H1Z6gaUUFUNaIamkaQxLYe87pK1DLKTXCYKqpQVtrrAWBrtdjLBc2oETLJ73y4RAHTQCk2Q/KyV1LTXO9zjDSkhdByOvjRArKxV1LbVOjYlgJaAuNVU1XkhfWPA+mzCHm96yiaQeTHsavg4q0rxqodmhCiyukqkig6V+KqylPLhYnH2pcfwEBot3JGJw9geEqrSVZbgUch8YVo46YN5KwVc0sErbqUNh8YHu/Jamn2qedSb30ny4cY19RdSuoqfh6+A9RscCDQoKi6Ojj2R17ysphpYc8RZ0gfZTvl6v4qM+awJMJ6BvCPEOi391hP/KffgpL9HwRHTsGb2DnZA3gkQDi4GN6GMldegE6iFExuu1tFvh+Jv1T/1Qy4MsxEUdX8nyAurmX2N3Bph928i11cYqL7FIahqeWHDvrwTVDw0qqLJYXbZYze7ft98AFXrbJ7iy/uVg/Qs52DgWUMFhMbBza7ux76QzelhHKcXxHthC46T+TZuNkJxWRGl/BRgAtAd0cl+QnEwAAAAASUVORK5CYII=" />
     <div class="pin-shadow" style="display:none;"></div>
     <div id="canvasHold">
-        <canvas id="myCanvas" width="300" height="300"> </canvas>
+        <canvas id="imageCanvas"></canvas>
     </div>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
     <script src="./js/index.js"></script>
+    <label>Image File:</label><br />
+    <input type="file" id="logo" name="logoLoader" />
+
 </body>
 </html>
