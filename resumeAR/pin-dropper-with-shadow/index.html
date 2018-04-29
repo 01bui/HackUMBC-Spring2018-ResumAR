@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pin Dropper with Shadow</title>
+  
+  
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic);
+h1 {
+  font-family: "Noto Serif";
+  text-align: center;
+}
+.pin {
+	position: absolute;
+
+	transform-origin: 50% 100%;
+	animation-duration: .5s;
+	animation-name: bounce;
+}
+
+@keyframes "bounce" {
+ 0% {
+   	opacity: 0;
+   	animation-timing-function: ease-out;
+   	transform: translateY(0) scale(0.9, 1.2);
+ }
+ 11% {
+   	opacity: 1;
+ }
+ 22% {
+   	transform: translateY(-13px) scale(0.9, 1.2);
+   	animation-timing-function: ease-in;
+ }
+ 48% {
+   	transform: translateY(-9px);
+   	animation-timing-function: ease-in-out;
+ }
+ 65% {
+   	transform: translateY(0) scale(1.05, 0.83);
+   	animation-timing-function: ease-in-out;
+ }
+ 72% {
+   	transform: translateY(0) scale(1.15,0.7);
+   	animation-timing-function: ease-out;
+ }
+ 100% {
+   	transform: translateY(0) scale(1,1);
+ }
+
+}
+
+.info {
+  position: absolute;
+  top:10px; right:10px;
+  padding:5px;;
+  background:rgba(0,0,0,.5);
+  color:#FFF;
+  font:12px sans-serif;
+}
+.pin-shadow{
+  position:absolute;
+  top:172px;
+  margin-left:-.75em;/*half of width.*/
+  left:50%;
+  width:.01em;
+  height:.5em;
+  background-color:rgba(120,120,120,.5);
+  border-radius:100%;
+  -moz-animation:     pin-shadow 0.3s 0.3s forwards;
+	-webkit-animation:  pin-shadow 0.3s 0.3s forwards;
+  -o-animation:       pin-shadow 0.3s 0.3s forwards;
+	animation:          pin-shadow 0.3s 0.3s forwards;
+}
+@-webkit-keyframes pin-shadow {
+  0%{
+    width:.01em;
+    margin-left:-.005em;/*half of width.*/
+  }
+  10%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  15%{
+    width:1.1em;
+    margin-left:-.55em;
+  }
+  20%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  25%{
+    width:1.2em;
+    margin-left:-.6em;
+  }
+  30%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  35%{
+    width:1.3em;
+    margin-left:-.65em;
+  }
+  40%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  100%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+}
+@-moz-keyframes pin-shadow {
+  0%{
+    width:.01em;
+    margin-left:-.005em;/*half of width.*/
+  }
+  10%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  15%{
+    width:1.1em;
+    margin-left:-.55em;
+  }
+  20%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  25%{
+    width:1.2em;
+    margin-left:-.6em;
+  }
+  30%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  35%{
+    width:1.3em;
+    margin-left:-.65em;
+  }
+  40%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  100%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+}
+@-o-keyframes pin-shadow {
+  0%{
+    width:.01em;
+    margin-left:-.005em;/*half of width.*/
+  }
+  10%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  15%{
+    width:1.1em;
+    margin-left:-.55em;
+  }
+  20%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  25%{
+    width:1.2em;
+    margin-left:-.6em;
+  }
+  30%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  35%{
+    width:1.3em;
+    margin-left:-.65em;
+  }
+  40%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  100%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+}
+@keyframes pin-shadow {
+  0%{
+    width:.01em;
+    margin-left:-.005em;/*half of width.*/
+  }
+  10%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  15%{
+    width:1.1em;
+    margin-left:-.55em;
+  }
+  20%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  25%{
+    width:1.2em;
+    margin-left:-.6em;
+  }
+  30%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  35%{
+    width:1.3em;
+    margin-left:-.65em;
+  }
+  40%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+  100%{
+    width:1.5em;
+    margin-left:-.75em;
+  }
+}
+
+#canvasHold{
+  width:100%;
+  height:100%;
+}
+
+canvas {
+  margin-left:25%;
+  /*background:purple;*/
+  
+  background-image: url(http://i.cubeupload.com/1HiXtC.jpg);
+  width:50%;
+  height:50%;
+}
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <h1>CLICK TO ADD PINS - PIN DROPPER</h1>
+<img class="pin" width="75" height="75" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABAZJREFUeNrsnO1tGkEQhveQ/4cUEAlXEFxAZKgAUkGgAocK4CoAKuCoIJcKOJQCoANflAYoIbPWxEIRYG5n3v1AHmnFD5u9vYd3Z2b3Zi8znu3Pw5c2fQypfabW5dY+8+8HantuW2rVp92vgwlkmWdATwxHYhbcklrpG1zmAdKU2uiCelztwNAWvqBlQFAzVlIbfA8v0AjYLDlYBMlOsx/UOp5dip2eY4K2R12gpQzqO33sAoAy7At3NIZR9MqiQa7YN8VgBSlsHCWsyEDBgGU3CgoCrCUENY8YlLURR+WwyqJBDDnqpWB9UlgVBBaB6nDUaycCy+Zi99Lk1XUazhMCZXisc+/KIlX16GNj0jTRdLxzVBXC/r+JHuAa0xPXwSgLoKqC2vrcr81BZKAccZ3V1dRnPSkNuGSHO740cPpbyXnSPX9Hw77BlcUR8FlhsBMCsBCsPTXcwEeXyNhEWUOFQY5dQbHS7Hc1MvIhehoOhAPM6WYL6V1yHwthNwM0LEl0qjU356ivie1T0EUPBoujoMhPAdKAXJKksg+GKKsjVFWpTYqno0RdUcIqDc4qn1PxWlgfBIPaAmEh+3aGJXnWh3xMVccI693eYWFg1ZGOvx0jrN++E8Ar7fHWpuEA2LdkvQpbSEvyma7CCuDcqkKS/+1RsKQ+awpQlbTPGgKLlha1dOGqWYPA+1oitfI9wXyWtDplzhU2UlBdBVU5uZUmsH4qhPmNBBh/d6OQMmzRsCqFGWRvcsfTqCmomdF7sOt0L02f7uyMvCb02MFe3D09qkWdGsWaL7qm05P4ps8N14qw7M2vuAqnOjE1HkEJrfOW0Z3DhRAPWXvgTF/F97Yayrc22M08H1Z6gaUUFUNaIamkaQxLYe87pK1DLKTXCYKqpQVtrrAWBrtdjLBc2oETLJ73y4RAHTQCk2Q/KyV1LTXO9zjDSkhdByOvjRArKxV1LbVOjYlgJaAuNVU1XkhfWPA+mzCHm96yiaQeTHsavg4q0rxqodmhCiyukqkig6V+KqylPLhYnH2pcfwEBot3JGJw9geEqrSVZbgUch8YVo46YN5KwVc0sErbqUNh8YHu/Jamn2qedSb30ny4cY19RdSuoqfh6+A9RscCDQoKi6Ojj2R17ysphpYc8RZ0gfZTvl6v4qM+awJMJ6BvCPEOi391hP/KffgpL9HwRHTsGb2DnZA3gkQDi4GN6GMldegE6iFExuu1tFvh+Jv1T/1Qy4MsxEUdX8nyAurmX2N3Bph928i11cYqL7FIahqeWHDvrwTVDw0qqLJYXbZYze7ft98AFXrbJ7iy/uVg/Qs52DgWUMFhMbBza7ux76QzelhHKcXxHthC46T+TZuNkJxWRGl/BRgAtAd0cl+QnEwAAAAASUVORK5CYII=" />
+
+<div class="pin-shadow" style="display:none;"></div>
+<div id="canvasHold">
+  <canvas id="myCanvas">
+  </canvas>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
