@@ -67,9 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\style.css" />
+    <Content Include="images\azure.png" />
     <Content Include="images\blank.jpg" />
     <Content Include="images\hanh.jpg" />
     <Content Include="images\logo.jpg" />
+    <Content Include="images\resumeEmpty.JPG" />
+    <Content Include="images\robot.jpg" />
     <Content Include="images\son.jpg" />
     <Content Include="images\thanh.jpg" />
     <Content Include="images\vy.jpg" />
@@ -140,6 +143,7 @@
     <Content Include="source\jquery.fine-uploader.js.map" />
     <Content Include="source\jquery.fine-uploader.min.js.map" />
     <Content Include="source\LICENSE" />
+    <None Include="Properties\PublishProfiles\resumeAR - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

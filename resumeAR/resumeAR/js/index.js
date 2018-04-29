@@ -1,9 +1,17 @@
+pin = $(".pin").click(function (e) {
+    pin.clone().appendTo("body").attr("style", "top: " + (e.pageY - 78) + "px; left: " + (e.pageX - 36.5) + "px;");
 
-pinshadow = $(".pin-shadow");
-    $('canvas').click(function(e){
-    pinshadow.clone().appendTo("body").attr("style", "top: " + (e.pageY-5) + "px; left: " + (e.pageX) + "px;");
+    if (last_x == 0 && last_y == 0) {
+        last_x = (e.pageY - 78);
+        last_y = (e.pageX - 36.5);
+    } 
+    pinshadow.clone().appendTo("body").attr("style", "top: " + (e.pageY - 5) + "px; left: " + (e.pageX) + "px;");
 });
 
+pinshadow = $(".pin-shadow");
+$('imageCanvas').click(function(e){
+    pinshadow.clone().appendTo("body").attr("style", "top: " + (e.pageY-5) + "px; left: " + (e.pageX) + "px;");
+});
 
 var imageLoader = document.getElementById('imageLoader');
 imageLoader.addEventListener('change', handleImage, false);

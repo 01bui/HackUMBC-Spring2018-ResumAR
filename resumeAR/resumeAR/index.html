@@ -12,9 +12,22 @@
     <script type="text/javascript" src="./index_files/addtoany.min.js"></script>
     <script type="text/javascript" src="./index_files/page.js" async="async"></script>
     <meta name="generator" content="MasterSlider 3.4.1 - Responsive Touch Image Slider | avt.li/msf">
+    <link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body>
+    <div id="botWindow" class="contentbot">
+        <iframe style='width:100%;height:100%;' frameborder='0' border='0' src='https://webchat.botframework.com/embed/bot4resume?s=I8axrm4y-F0.cwA.amk.7OEQjDHIH38wY9qfodpn_xb4O0oC23K4OoOyKhM0GI4'></iframe>
+    </div>
+    <div id="textWindow" class="contentbottext">
+        <h1></h1>
+    </div>
+    <script>
+        var frame = document.getElementById('botWindow');
+        var frame_text = document.getElementById('textWindow');
+        frame.style.visibility = "hidden"
+        frame_text.style.visibility = "hidden"
+    </script>
     <div id="tg-wrapper" class="tg-wrapper tg-haslayout">
         <header id="tg-header" class="tg-haslayout tg-header1">
             <div class="tg-navigationarea tg-haslayout">
@@ -33,7 +46,7 @@
                                             <a href="">Features</a>
                                             <ul class="tg-dropdownmenu">
                                                 <li><a href="">AR Development</a></li>
-                                                <li><a href="">Bot Consulting</a></li>
+                                                <li><a onclick="botWindowFunction()" class="btn-xl">BOT</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="">About us</a></li>
@@ -50,6 +63,19 @@
                 </div>
             </div>
         </header>
+        <script>
+            function botWindowFunction() {
+                var x = document.getElementById("botWindow");
+                var y = document.getElementById("textWindow");
+                if (x.style.visibility === "hidden") {
+                    x.style.visibility = "visible";
+                    y.style.visibility = "visible";
+                } else {
+                    x.style.visibility = "hidden";
+                    y.style.visibility = "hidden";
+                }
+            }
+        </script>
         <script>
             (function () {
 
@@ -73,7 +99,7 @@
             <section class="video-section">
                 <div class="fullscreen-bg">
                     <video id="main_shot3" autoplay="autoplay" loop="loop" muted="" class="intro-screen wow bounceInUp animated fullscreen-bg__video" style="visibility: visible;-webkit-animation-delay: 0.5s; -moz-animation-delay: 0.5s; animation-delay: 0.5s;">
-                        <source src="./videos/resumeVideo.mp4" type="video/mp4">
+                        <source src="https://01bui.blob.core.windows.net/asset-8ec01291-1617-460b-9916-5c73b83dfd1d/resumeVideo.mp4?sv=2015-07-08&sr=c&si=83473272-ff35-4613-9e8a-28954f939b73&sig=gIH8BXJpFR8MKM2DxfkZ5bwV6ky9GiSQj3qOFT4XljE%3D&st=2018-04-29T12%3A16%3A58Z&se=2118-04-29T12%3A16%3A58Z" type="video/mp4">
                     </video>
                     <div class="fullscreen-bg-overlay"></div>
                 </div>
@@ -95,12 +121,13 @@
                 <div class="container">
                     <div class="logos-list">
                         <div class="logos-list-item" style="margin-left: 9%;"><img src="./index_files/logo5-1.png" alt="Unity AR"></div>
-                        <div class="logos-list-item"><img src="./index_files/l2.png" alt="International House" style="width: 80%;"></div>
+                        <div class="logos-list-item"><img src="./index_files/l2.png" alt="" style="width: 80%;"></div>
+                        <div class="logos-list-item"><img src="./images/azure.png" alt="Microsoft Azure" style="width: 60%;"></div>
                     </div>
                 </div>
             </section>
             <section id="clients" class="technologies" style="margin-bottom: 0px;">
-                <div class="container"><div class="section-heading"><h2>OUR EXPERTS</h2></div></div>
+                <div class="container"><div class="section-heading"><h2>OUR TEAM</h2></div></div>
             </section>
             <section id="sectionTeam">
                 <div class="container">
