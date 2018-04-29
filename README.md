@@ -8,6 +8,8 @@ Team members:
 3. Son Dinh
 4. Vy Bui
 
+# Domain name: pandasighentist.com
+
 # Inspiration
 Often times, a recruiter has approximately 9 seconds to scan through a resume, and hundreds of resumes a day. We create resumAR to make this journey more enjoyable and efficient. Not only will the platform be useful for recruiter, it also creates an environment to help career search based on personal interests and skill sets, therefore, helping create economic opportunity more efficiently to everyone.
 
@@ -30,4 +32,5 @@ We learn to build an AR mobile phone app from scratch. We figure how to deploy t
 Further data training for the assistant bot will be employed. In addition, we want to expand our AR capability for 3D display to a more interactive user experience. improve the chat bot so that it can effectively
 
 # Demo Videos:
-AR: link Assitant Bot: link
+AR: https://www.youtube.com/watch?v=yRG35fdUF4M&feature=youtu.be
+Assitant Bot: https://www.youtube.com/watch?v=T5HSMBs_jy8&feature=youtu.be
