@@ -1,6 +1,6 @@
 # resumeAR
 
-HackUMBC Spring 2018 Submission
+Won 2nd prize and Best Design prize at HackUMBC Spring 2018
 
 Team members:
 1. Thanh Nguyen
